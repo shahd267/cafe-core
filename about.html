@@ -3,39 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CaféCore | Login</title>
+  <title>CaféCore | About</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<style>  .navbar {
+      background-color: #4e342e;
+      color: #fff8ec;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff8ec;
+    }
+    .nav-links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #fff8ec;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    .nav-links a:hover {
+      color: #f3e5ab;
+    }</style>
+
 </head>
-<body class="login-page">
+<body>
 
-  <div class="login-container">
-    <h2>Login to CaféCore</h2>
-    <form>
-      <input type="email" placeholder="Email Address" required />
-      <input type="password" id="password" placeholder="Password" required />
-      <div class="show-password">
-        <input type="checkbox" id="togglePassword" />
-        <label for="togglePassword">Show Password</label>
-      </div>
-      <button type="submit">Login</button>
-    </form>
-    <div class="register-link">
-      Don't have an account? <a href="#">Create one now</a>
+  <!-- 🔹 Navbar -->
+  <header class="navbar">
+    <div class="logo">CaféCore</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="reservation.html">Reservation</a>
+      <a href="about.html">About</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <!-- 🔹 About Section -->
+  <section class="about-section animate-on-scroll">
+    <div class="about-text">
+      <h2>Who We Are</h2>
+      <p>
+        CaféCore is more than just coffee – it’s a culture. We blend premium beans, artistic brewing, and a cozy atmosphere to offer an unforgettable café experience. Whether you're meeting friends, working remotely, or simply enjoying a quiet cup alone, CaféCore is your go-to space for warmth and inspiration.
+      </p>
+      <a href="menu.html" class="btn">Explore Our Menu</a>
     </div>
-  </div>
 
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="About CaféCore" />
+    </div>
+  </section>
+
+  <!-- 🔹 Footer -->
+  <footer class="footer">
+    <p>© 2025 CaféCore. All rights reserved.</p>
+  </footer>
+
+  <!-- 🔹 Scroll Animation -->
   <script>
-    // Show/Hide Password
-    const toggle = document.getElementById('togglePassword');
-    const passwordInput = document.getElementById('password');
-    toggle.addEventListener('change', () => {
-      passwordInput.type = toggle.checked ? 'text' : 'password';
+    document.addEventListener("DOMContentLoaded", () => {
+      const elements = document.querySelectorAll(".animate-on-scroll");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          }
+        });
+      }, { threshold: 0.2 });
+
+      elements.forEach(el => observer.observe(el));
     });
   </script>
-  <script src="main.js"></script>
-
 
 </body>
 </html>
+
 
