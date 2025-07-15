@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CaféCore | Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- SwiperJS CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
+  <style>
+  .navbar {
+    background-color: #4e342e;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff8ec;
+  }
+
+  .nav-links a {
+    color: #fff8ec;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: #f3e5ab;
+  }
+</style>
+
+</head>
+<body>
+
+  <!-- 🔹 Navbar -->
+<header class="navbar">
+  <div class="logo">CaféCore</div>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="reservation.html">Reservation</a>
+    <a href="about.html">About</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+
+
+  <!-- 🔹 Hero Section -->
+  <section class="hero animate-on-scroll">
+    <div class="hero-text">
+      <h1>Where Coffee Meets Soul</h1>
+      <p>Crafted with passion, served with love. Discover your perfect cup at CaféCore.</p>
+      <div class="hero-buttons">
+        <a href="menu.html" class="btn">Explore Menu</a>
+        <a href="reservation.html" class="btn-outline">Book a Table</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 Why Choose Us -->
+  <section class="why-us animate-on-scroll">
+    <h2>Why Choose CaféCore?</h2>
+    <div class="features">
+      <div class="feature-card">
+        <i class="fas fa-coffee fa-2x"></i>
+        <h3>High-Quality Beans</h3>
+        <p>We source the finest beans for an unforgettable flavor.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-couch fa-2x"></i>
+        <h3>Cozy Atmosphere</h3>
+        <p>A warm, relaxing space to unwind and connect.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-shipping-fast fa-2x"></i>
+        <h3>Fast Delivery</h3>
+        <p>Get your coffee fast, fresh, and hot – wherever you are.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 Featured Menu -->
+  <section class="menu-preview animate-on-scroll">
+    <h2>Signature Drinks</h2>
+    <div class="menu-items">
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" />
+        <h3>Espresso</h3>
+        <p>Strong & bold. A pure shot of energy.</p>
+        <span>$2.50</span>
+      </div>
+      <div class="menu-card">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.KlgP8Hb0E70s3w04Ml7yQwHaLH" />
+        <h3>Latte</h3>
+        <p>Smooth and creamy. Perfect for a chill day.</p>
+        <span>$3.80</span>
+      </div>
+      <div class="menu-card">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.MIfXoQZ71w-6wMah-QMIkwHaLH" />
+        <h3>French Press</h3>
+        <p>Rich and deep. Brewed the traditional way.</p>
+        <span>$3.20</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 About Preview -->
+  <section class="about-preview animate-on-scroll">
+    <div class="about-text">
+      <h2>About CaféCore</h2>
+      <p>Founded by passionate coffee lovers, CaféCore blends art, warmth, and flavor to create the perfect café experience. Come see what makes us different.</p>
+      <a href="#" class="btn">Read More</a>
+    </div>
+  </section>
+
+  <!-- 🔹 Contact Us -->
+  <section class="contact-us animate-on-scroll">
+    <h2>Contact Us</h2>
+    <p>Have questions or feedback? Reach out below.</p>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- 🔹 Testimonials Section -->
+<section class="testimonials-section animate-on-scroll">
+  <h2 class="section-title">What Our Customers Say</h2>
+  <div class="swiper testimonials-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide testimonial-card">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="client">
+        <p>"Absolutely the best latte I've ever had! Cozy vibes and great staff."</p>
+        <h4>Nour A.</h4>
+        <span>Graphic Designer</span>
+      </div>
+      <div class="swiper-slide testimonial-card">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="client">
+        <p>"The French Press was so smooth! This café is my new spot."</p>
+        <h4>Ali M.</h4>
+        <span>Photographer</span>
+      </div>
+      <div class="swiper-slide testimonial-card">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="client">
+        <p>"Loved the ambiance, and the beans I bought were top-notch."</p>
+        <h4>Sarah K.</h4>
+        <span>Barista</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- 🔹 Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2025 CaféCore. All rights reserved.</p>
+      <p>Follow us on social media: Instagram | Facebook | Twitter</p>
+    </div>
+  </footer>
+
+  <!-- 🔹 Animation Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const elements = document.querySelectorAll(".animate-on-scroll");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          }
+        });
+      }, {
+        threshold: 0.2
+      });
+
+      elements.forEach(el => observer.observe(el));
+    });
+  </script>
+
+  <!-- SwiperJS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+  new Swiper('.testimonials-slider', {
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false
+    },
+    slidesPerView: 1,
+    spaceBetween: 30,
+    breakpoints: {
+      768: {
+        slidesPerView: 2
+      },
+      1024: {
+        slidesPerView: 3
+      }
+    }
+  });
+</script>
+<script src="main.js"></script>
+
+
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CaféCore | Reservation</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+
+    
+    
+    .reservation-section {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') center/cover no-repeat;
+      padding: 100px 20px;
+      color: #fff;
+      text-align: center;
+      
+    }
+
+    .reservation-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    .reservation-form {
+      max-width: 600px;
+      margin: auto;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .reservation-form input,
+    .reservation-form select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      background-color: rgba(255,255,255,0.2);
+      color: #fff;
+    }
+
+    .reservation-form input::placeholder {
+      color: #eee;
+    }
+
+    .reservation-form button {
+      width: 100%;
+      padding: 12px;
+      background-color: #a97449;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .reservation-form button:hover {
+      background-color: #c08e5e;
+    }
+
+    /* Scroll animation */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.6s ease-out;
+    }
+
+    .animate-on-scroll.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔹 Navbar -->
+<header class="navbar">
+  <div class="logo">CaféCore</div>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="reservation.html">Reservation</a>
+    <a href="about.html">About</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+
+  <!-- 🔹 Reservation Section -->
+  <section class="reservation-section animate-on-scroll">
+    <h2>Reserve Your Table</h2>
+    <form class="reservation-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <input type="number" placeholder="Number of Guests" required />
+      <input type="date" required />
+      <input type="time" required />
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+  <!-- 🔹 Footer -->
+  <footer class="footer">
+    <p>© 2025 CaféCore. All rights reserved.</p>
+  </footer>
+
+  <!-- 🔹 Scroll Animation Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const elements = document.querySelectorAll(".animate-on-scroll");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          }
+        });
+      }, {
+        threshold: 0.2
+      });
+
+      elements.forEach(el => observer.observe(el));
+    });
+  </script>
+ <script src="main.js"></script>
+
+</body>
+</html>

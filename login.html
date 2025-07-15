@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CaféCore | Login</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="login-page">
+<header class="navbar">
+  <div class="logo">CaféCore</div>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="reservation.html">Reservation</a>
+    <a href="about.html">About</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+<body class="login-page">
+
+  <div class="login-container">
+
+    <!-- 🔹 Login Form -->
+    <div id="login-form">
+      <h2>Login to CaféCore</h2>
+      <form>
+        <input type="email" placeholder="Email Address" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <div class="show-password">
+          <input type="checkbox" id="togglePassword" />
+          <label for="togglePassword">Show Password</label>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+      <div class="register-link">
+        Don't have an account? <a href="#" id="show-register">Create one now</a>
+      </div>
+    </div>
+
+    <!-- 🔹 Register Form (Hidden by default) -->
+    <div id="register-form" style="display: none;">
+      <h2>Create Your Account</h2>
+      <form>
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="password" placeholder="Password" required />
+        <input type="password" placeholder="Confirm Password" required />
+        <button type="submit">Register</button>
+      </form>
+      <div class="register-link">
+        Already have an account? <a href="#" id="show-login">Back to login</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Toggle Password Show
+    const toggle = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+    toggle.addEventListener('change', () => {
+      passwordInput.type = toggle.checked ? 'text' : 'password';
+    });
+
+    // Switch between Login/Register forms
+    const loginForm = document.getElementById('login-form');
+    const registerForm = document.getElementById('register-form');
+    const showRegister = document.getElementById('show-register');
+    const showLogin = document.getElementById('show-login');
+
+    showRegister.addEventListener('click', (e) => {
+      e.preventDefault();
+      loginForm.style.display = 'none';
+      registerForm.style.display = 'block';
+    });
+
+    showLogin.addEventListener('click', (e) => {
+      e.preventDefault();
+      registerForm.style.display = 'none';
+      loginForm.style.display = 'block';
+    });
+
+  </script>
+<script src="main.js"></script>
+
+</body>
+
+
